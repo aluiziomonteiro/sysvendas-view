@@ -1,0 +1,64 @@
+.main-div{
+  display: flex;
+  flex-direction: row;
+}
+  
+.esquerda{
+  width: 50%;
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+}
+  
+.direita{
+  width: 50%;  
+}
+  
+.img-login{
+  width: 50%;
+  position: fixed;
+}
+  
+.img-logo{
+  margin-top: 10%;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+i.fa {
+	font-size: 26px;
+	padding: 4px;
+	color: #143a2db9;
+	transition: all 0.3s;
+}
+
+i.fa:hover {
+	color: blue;
+}
+
+section {
+  margin-bottom: 10%;
+}
+
+.login-page a {
+  display: flex;
+  justify-content: center;
+  color: blue;
+  font-size: 12px;
+}
+
+section p {
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.social{
+  display: flex;
+  justify-content: space-evenly;
+}

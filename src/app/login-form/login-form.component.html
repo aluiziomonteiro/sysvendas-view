@@ -1,0 +1,60 @@
+
+<form [formGroup]="login" (ngSubmit)="entrar()"> 
+<div class="main-div">
+ 
+  <div class="esquerda">
+
+    
+    <img class="img-logo" src="../../assets/img/logo-sisvendas2.png">
+    <div class="login-form" color="primary"> 
+          
+      <mat-form-field >
+        <mat-label>Usuário</mat-label>
+        <input  matInput 
+                type="text" 
+                name="usuario"
+                formControlName="usuario">
+
+          <mat-error *ngIf="validacao.hasErrorValidar(f.usuario, 'required')">Preenchimento obrigatório</mat-error>
+          <mat-error *ngIf="validacao.hasError(f.usuario, 'minlength')">Mínimo 6 caracteres</mat-error>
+
+        <span matPrefix>
+          <mat-icon color="primary" >person_outline</mat-icon>
+        </span>
+      </mat-form-field>
+  
+        <mat-form-field  >
+          <mat-label>Senha</mat-label>
+          <input  matInput 
+                  [type]="hide ? 'password' : 'text'" 
+                  name="senha"
+                  formControlName="senha">
+          <mat-error *ngIf="validacao.hasErrorValidar(f.senha, 'required')">Preenchimento obrigatório</mat-error>
+          <mat-error *ngIf="validacao.hasErrorValidar(f.senha, 'minlength')">Mínimo 6 caracteres</mat-error>
+          
+          <span matPrefix> <mat-icon color="primary">lock_outline</mat-icon> </span>
+          <button mat-icon-button 
+                  matSuffix 
+                  (click)="hide = !hide" 
+                  [attr.aria-label]="'Hide password'" 
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary">Entrar </button>
+
+        
+    </div>
+
+    <div class="no-account">
+      <a mat-button routerLink="../registrar">Não tem uma conta?</a>
+    </div>
+  </div>
+
+  <div class="direita">
+    <img class="img-login" src="../../assets/img/login-bg.jpg" alt="imagem estática">
+  </div>
+
+</div>
+</form>

@@ -1,0 +1,14 @@
+.main-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;  
+  padding-top: 7%;
+  background-color: #f5f5f5bd;
+}
+
+.main-div p {
+  margin-top: -20px;
+  font-size: 70px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
